@@ -2,7 +2,7 @@ import mechanize
 import re
 import csv
 
-my_url = "http://cscanlin.com/Part%201%20(112)/10129%20TOTAL%20TEA%20INFUSER/"
+my_url = "Type the URL you want to use here"
 
 br = mechanize.Browser()
 br.open(my_url)
@@ -13,6 +13,6 @@ print(images_list)
 
 images_list = [my_url + i for i in images_list]
 
-with open('C:\Users\Chris\My Documents\pic-urls.csv', 'wb') as my_csv:
-  writer = csv.writer(my_csv)
-  writer.writerow(images_list)
+with open('Type the file path you want to output to here', 'wb') as csv_to_write:
+  writer = csv.writer(csv_to_write)
+  writer.writecolumn(images_list)
